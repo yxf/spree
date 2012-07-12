@@ -1,6 +1,6 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag 'https://api.jirafe.com/dashboard/css/spree_ui.css', :media => 'all' %>
-  <%= javascript_include_tag 'https://jirafe.com/dashboard/js/spree_namespaced_ui.js' %>
+  <%= stylesheet_link_tag 'https://fb-qa.jirafe.com/dashboard/css/spree_ui.css', :media => 'all' %>
+  <%= javascript_include_tag 'https://fb-qa.jirafe.com/dashboard/js/spree_namespaced_ui.js' %>
 <% end %>
 
 <% if Spree::Dash::Config.configured? %>
@@ -8,7 +8,7 @@
   <div id="jirafe"></div>
   <%= javascript_tag :defer => 'defer' do %>
     jirafe.jQuery('#jirafe').jirafe({
-       api_url: 'https://api.jirafe.com/v1',
+       api_url: 'https://fb-api.jirafe.com/v1',
        api_token: '<%= Spree::Dash::Config.token %>',
        app_id: '<%= Spree::Dash::Config.app_id %>',
        version: 'spree-v0.1.0',
